@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+}
+.button{
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.button::after{
+    content:'';
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0px;
+    transform: scaleX(0);
+    transform-origin: left right;
+    transition: transform 1s;
+}
+.button:hover::after{
+    transform: scaleX(1);
+}
